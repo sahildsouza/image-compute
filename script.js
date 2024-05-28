@@ -4,20 +4,50 @@ document.addEventListener('DOMContentLoaded', function() {
     const context = canvas.getContext('2d');
     const snapButton = document.getElementById('snap');
     const uploadButton = document.getElementById('uploadButton');
+    const flipCameraButton = document.getElementById('flipCamera');
     const resultDiv = document.getElementById('result');
     const subscriptionKey = '013f59cb0669428a808fd370a4dde502';
     const endpoint = 'https://eastus.api.cognitive.microsoft.com/vision/v3.2/ocr';
 
-    // Get access to the camera
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
-            video.srcObject = stream;
-            video.play();
+    let currentStream;
+    let useFrontCamera = true;
+
+    function stopMediaTracks(stream) {
+        stream.getTracks().forEach(track => {
+            track.stop();
         });
     }
 
-    // Trigger photo take
-    snapButton.addEventListener('click', function() {
+    async function getCameraStream() {
+        if (currentStream) {
+            stopMediaTracks(currentStream);
+        }
+
+        const constraints = {
+            video: {
+                facingMode: useFrontCamera ? 'user' : 'environment'
+            }
+        };
+
+        try {
+            currentStream = await navigator.mediaDevices.getUserMedia(constraints);
+            video.srcObject = currentStream;
+        } catch (error) {
+            console.error('Error accessing camera: ', error);
+        }
+    }
+
+    // Initialize camera stream
+    getCameraStream();
+
+    // Flip camera
+    flipCameraButton.addEventListener('click', () => {
+        useFrontCamera = !useFrontCamera;
+        getCameraStream();
+    });
+
+    // Capture image from video
+    snapButton.addEventListener('click', () => {
         context.drawImage(video, 0, 0, 320, 240);
         resultDiv.textContent = 'Image captured. Now click "Analyze Image" to perform OCR.';
     });

@@ -10,9 +10,12 @@
     <div class="container">
         <h1>Azure Computer Vision OCR with Camera</h1>
         <video id="video" width="320" height="240" autoplay></video>
-        <button id="snap">Capture</button>
+        <div>
+            <button id="flipCamera">Flip Camera</button>
+            <button id="snap">Capture</button>
+            <button id="uploadButton">Analyze Image</button>
+        </div>
         <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
-        <button id="uploadButton">Analyze Image</button>
         <div id="result"></div>
     </div>
     <script src="script.js"></script>
