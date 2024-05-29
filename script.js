@@ -11,9 +11,6 @@ async function processImage() {
         return;
     }
 
-    const formData = new FormData();
-    formData.append('file', file);
-
     try {
         const response = await fetch(`${endpoint}/vision/v3.1/ocr`, {
             method: 'POST',
@@ -129,5 +126,25 @@ function handleFeature() {
         detectObjects();
     } else if (featureSelect === 'denseCaptions') {
         addDenseCaptions();
+    }
+}
+
+// Function to preview the uploaded image
+function previewImage(event) {
+    const imagePreview = document.getElementById('imagePreview');
+    const file = event.target.files[0];
+    
+    if (file) {
+        const reader = new FileReader();
+        
+        reader.onload = function(e) {
+            imagePreview.src = e.target.result;
+            imagePreview.style.display = 'block';
+        }
+        
+        reader.readAsDataURL(file);
+    } else {
+        imagePreview.style.display = 'none';
+        imagePreview.src = '#';
     }
 }
