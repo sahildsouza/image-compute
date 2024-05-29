@@ -1,13 +1,11 @@
 const subscriptionKey = '51406f737efb42ffbb586ee795427851';
 const endpoint = 'https://prod-vision-compute.cognitiveservices.azure.com/';
 
-// Function to process image for OCR
-async function processImage() {
-    const fileInput = document.getElementById('imageInput');
-    const file = fileInput.files[0];
+let videoStream;
 
+async function processImage(file) {
     if (!file) {
-        alert('Please select an image file.');
+        alert('Please select or capture an image.');
         return;
     }
 
@@ -43,13 +41,9 @@ async function processImage() {
     }
 }
 
-// Function to process image for object detection
-async function detectObjects() {
-    const fileInput = document.getElementById('imageInput');
-    const file = fileInput.files[0];
-
+async function detectObjects(file) {
     if (!file) {
-        alert('Please select an image file.');
+        alert('Please select or capture an image.');
         return;
     }
 
@@ -80,13 +74,9 @@ async function detectObjects() {
     }
 }
 
-// Function to process image for dense captions
-async function addDenseCaptions() {
-    const fileInput = document.getElementById('imageInput');
-    const file = fileInput.files[0];
-
+async function addDenseCaptions(file) {
     if (!file) {
-        alert('Please select an image file.');
+        alert('Please select or capture an image.');
         return;
     }
 
@@ -117,34 +107,78 @@ async function addDenseCaptions() {
     }
 }
 
-// Function to handle the feature selection
 function handleFeature() {
     const featureSelect = document.getElementById('featureSelect').value;
+    const fileInput = document.getElementById('imageInput');
+    const file = fileInput.files[0] || capturedImageFile;
+
     if (featureSelect === 'convertText') {
-        processImage();
+        processImage(file);
     } else if (featureSelect === 'detectObjects') {
-        detectObjects();
+        detectObjects(file);
     } else if (featureSelect === 'denseCaptions') {
-        addDenseCaptions();
+        addDenseCaptions(file);
     }
 }
 
-// Function to preview the uploaded image
-function previewImage(event) {
-    const imagePreview = document.getElementById('imagePreview');
-    const file = event.target.files[0];
-    
+function previewImage() {
+    const fileInput = document.getElementById('imageInput');
+    const file = fileInput.files[0];
+    const previewContainer = document.getElementById('imagePreviewContainer');
+    const previewImage = document.getElementById('imagePreview');
+
     if (file) {
         const reader = new FileReader();
-        
         reader.onload = function(e) {
-            imagePreview.src = e.target.result;
-            imagePreview.style.display = 'block';
-        }
-        
+            previewImage.src = e.target.result;
+            previewContainer.classList.remove('hidden');
+        };
         reader.readAsDataURL(file);
     } else {
-        imagePreview.style.display = 'none';
-        imagePreview.src = '#';
+        previewContainer.classList.add('hidden');
+        previewImage.src = '';
     }
+}
+
+function openCamera() {
+    const cameraContainer = document.getElementById('cameraContainer');
+    const video = document.getElementById('video');
+
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+            videoStream = stream;
+            video.srcObject = stream;
+            video.play();
+            cameraContainer.classList.remove('hidden');
+        })
+        .catch(error => {
+            console.error('Error accessing camera:', error);
+            alert('Error accessing camera. Please try again.');
+        });
+}
+
+let capturedImageFile;
+
+function captureImage() {
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const context = canvas.getContext('2d');
+
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+    canvas.toBlob(blob => {
+        capturedImageFile = new File([blob], 'captured-image.png', { type: 'image/png' });
+
+        const previewImage = document.getElementById('imagePreview');
+        const previewContainer = document.getElementById('imagePreviewContainer');
+        
+        previewImage.src = URL.createObjectURL(capturedImageFile);
+        previewContainer.classList.remove('hidden');
+    });
+
+    videoStream.getTracks().forEach(track => track.stop());
+    document.getElementById('cameraContainer').classList.add('hidden');
 }
