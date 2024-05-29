@@ -1,5 +1,5 @@
-const subscriptionKey = '013f59cb0669428a808fd370a4dde502';
-const endpoint = 'https://project-vision-main.cognitiveservices.azure.com/';
+const subscriptionKey = '51406f737efb42ffbb586ee795427851';
+const endpoint = 'https://prod-vision-compute.cognitiveservices.azure.com/';
 
 // Function to process image for OCR
 async function processImage() {
