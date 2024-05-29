@@ -2,6 +2,8 @@ const subscriptionKey = '51406f737efb42ffbb586ee795427851';
 const endpoint = 'https://prod-vision-compute.cognitiveservices.azure.com/';
 
 let videoStream;
+let capturedImageFile;
+let currentCameraId = null;
 
 async function processImage(file) {
     if (!file) {
@@ -144,7 +146,13 @@ function openCamera() {
     const cameraContainer = document.getElementById('cameraContainer');
     const video = document.getElementById('video');
 
-    navigator.mediaDevices.getUserMedia({ video: true })
+    const constraints = {
+        video: {
+            deviceId: currentCameraId ? { exact: currentCameraId } : undefined
+        }
+    };
+
+    navigator.mediaDevices.getUserMedia(constraints)
         .then(stream => {
             videoStream = stream;
             video.srcObject = stream;
@@ -157,7 +165,13 @@ function openCamera() {
         });
 }
 
-let capturedImageFile;
+function closeCamera() {
+    if (videoStream) {
+        videoStream.getTracks().forEach(track => track.stop());
+    }
+    const cameraContainer = document.getElementById('cameraContainer');
+    cameraContainer.classList.add('hidden');
+}
 
 function captureImage() {
     const video = document.getElementById('video');
@@ -179,6 +193,46 @@ function captureImage() {
         previewContainer.classList.remove('hidden');
     });
 
-    videoStream.getTracks().forEach(track => track.stop());
-    document.getElementById('cameraContainer').classList.add('hidden');
+    closeCamera();
 }
+
+function switchCamera() {
+    if (videoStream) {
+        videoStream.getTracks().forEach(track => track.stop());
+    }
+
+    const video = document.getElementById('video');
+    const cameraSelect = document.getElementById('cameraSelect');
+    currentCameraId = cameraSelect.value;
+
+    openCamera();
+}
+
+function populateCameraOptions() {
+    navigator.mediaDevices.enumerateDevices()
+        .then(devices => {
+            const cameraSelect = document.getElementById('cameraSelect');
+            cameraSelect.innerHTML = '';
+
+            devices.forEach(device => {
+                if (device.kind === 'videoinput') {
+                    const option = document.createElement('option');
+                    option.value = device.deviceId;
+                    option.text = device.label || `Camera ${cameraSelect.length + 1}`;
+                    cameraSelect.appendChild(option);
+                }
+            });
+
+            if (cameraSelect.options.length > 0) {
+                currentCameraId = cameraSelect.options[0].value;
+                openCamera();
+            }
+        })
+        .catch(error => {
+            console.error('Error enumerating devices:', error);
+        });
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    populateCameraOptions();
+});
