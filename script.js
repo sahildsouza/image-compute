@@ -152,9 +152,16 @@ function previewImage() {
 }
 
 
+
 function openCamera() {
     const cameraContainer = document.getElementById('cameraContainer');
     const video = document.getElementById('video');
+    const previewContainer = document.getElementById('imagePreviewContainer');
+    const previewImage = document.getElementById('imagePreview');
+
+    // Clear the captured image preview
+    previewContainer.classList.add('hidden');
+    previewImage.src = '';
 
     const constraints = {
         video: {
@@ -174,6 +181,8 @@ function openCamera() {
             alert('Error accessing camera. Please try again.');
         });
 }
+
+
 
 function closeCamera() {
     if (videoStream) {
@@ -196,7 +205,7 @@ function captureImage() {
     canvas.toBlob(blob => {
         capturedImageFile = new File([blob], 'captured-image.png', { type: 'image/png' });
 
-        // Clear the previous image input
+        // Clear the uploaded image
         const fileInput = document.getElementById('imageInput');
         fileInput.value = '';
 
@@ -210,6 +219,8 @@ function captureImage() {
 
     closeCamera();
 }
+
+
 
 
 function switchCamera() {
