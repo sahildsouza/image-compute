@@ -111,8 +111,12 @@ async function addDenseCaptions(file) {
 
 function handleFeature() {
     const featureSelect = document.getElementById('featureSelect').value;
-    const fileInput = document.getElementById('imageInput');
-    const file = fileInput.files[0] || capturedImageFile;
+    const file = document.getElementById('imageInput').files[0] || capturedImageFile;
+
+    if (!file) {
+        alert('Please select or capture an image.');
+        return;
+    }
 
     if (featureSelect === 'convertText') {
         processImage(file);
@@ -123,11 +127,16 @@ function handleFeature() {
     }
 }
 
+
+
 function previewImage() {
     const fileInput = document.getElementById('imageInput');
     const file = fileInput.files[0];
     const previewContainer = document.getElementById('imagePreviewContainer');
     const previewImage = document.getElementById('imagePreview');
+
+    // Clear the captured image
+    capturedImageFile = null;
 
     if (file) {
         const reader = new FileReader();
@@ -141,6 +150,7 @@ function previewImage() {
         previewImage.src = '';
     }
 }
+
 
 function openCamera() {
     const cameraContainer = document.getElementById('cameraContainer');
@@ -186,15 +196,21 @@ function captureImage() {
     canvas.toBlob(blob => {
         capturedImageFile = new File([blob], 'captured-image.png', { type: 'image/png' });
 
+        // Clear the previous image input
+        const fileInput = document.getElementById('imageInput');
+        fileInput.value = '';
+
+        // Update the image preview
         const previewImage = document.getElementById('imagePreview');
         const previewContainer = document.getElementById('imagePreviewContainer');
-        
+
         previewImage.src = URL.createObjectURL(capturedImageFile);
         previewContainer.classList.remove('hidden');
     });
 
     closeCamera();
 }
+
 
 function switchCamera() {
     if (videoStream) {
