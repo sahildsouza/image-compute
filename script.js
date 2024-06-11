@@ -1,5 +1,5 @@
-const subscriptionKey = '5a0241dd7aad4b4296108c70267609a9';
-const endpoint = 'https://image-compute.cognitiveservices.azure.com/';
+const subscriptionKey = '1bb5d03b49db432196e1073f2fab7939';
+const endpoint = 'https://vision-compute-proj.cognitiveservices.azure.com/';
 
 let videoStream;
 let capturedImageFile;
