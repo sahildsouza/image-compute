@@ -62,5 +62,5 @@ jobs:
         with:
           app-name: 'vision-compute'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4191474AE2F14BFF9BEAC95C0FAA3A03 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_815834AF52E1457A86911274603CF7A4 }}
           package: .
