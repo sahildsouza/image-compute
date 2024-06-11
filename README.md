@@ -1,6 +1,5 @@
 # Working Links
-<a href="https://sahelidisitalstudio.azurewebsites.net/" rel="nofollow">Saheli Digital Studio</a>
-
+<a href="vision-compute-project.azurewebsites.net" rel="nofollow">Vision-Compute</a>
 
 # Vision Compute
 
@@ -67,17 +66,3 @@ const endpoint = 'https://your-endpoint-url.cognitiveservices.azure.com/';
 2. **Open Camera**: Click on "Open Camera" to capture an image using your device's camera.
 3. **Select Feature**: Choose the desired feature from the dropdown menu.
 4. **Submit**: Click on "Submit" to process the image and display the results.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-- [Azure Cognitive Services](https://azure.microsoft.com/en-us/services/cognitive-services/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Google Fonts - Roboto](https://fonts.google.com/specimen/Roboto)
-
----
-
-Feel free to customize the `README.md` file further based on your specific requirements and preferences.
