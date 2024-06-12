@@ -128,22 +128,38 @@ Now go back to App service and in settings click on backups and select the stora
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/22.png?raw=true)
 
-
+Now to get alert whenever the App service is restarted. Search for Monitor on the Azure portal. 
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/23.png?raw=true)
 
+Click on Alerts and create new alert rule.
+
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/24.png?raw=true)
+
+Select your web app from the resource group and click on apply. 
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/25.png?raw=true)
 
+Now navigate to condition and from see all signals search for "Restart web app" and click on apply.
+
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/26.png?raw=true)
+
+Now navigate to Actions and create new action group.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/27.png?raw=true)
 
+Fill all the required information as shown below.
+
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/28.png?raw=true)
+
+Navigate to Notificatios and add your email and phone number to which alert will be sent and click OK.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/29.png?raw=true)
 
+Navigate to details tab name the action rule.
+
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/30.png?raw=true)
+
+Once all done click on review + create and click on create.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/31.png?raw=true)
