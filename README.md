@@ -37,3 +37,73 @@ This project utilizes Azure's Computer Vision API for the following functionalit
 2. **Open Camera**: Click on "Open Camera" to capture an image using your device's camera.
 3. **Select Feature**: Choose the desired feature from the dropdown menu.
 4. **Submit**: Click on "Submit" to process the image and display the results.
+
+## Deployment Steps
+
+Search for Computer Vision on Azure portal.
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/1.png?raw=true)
+
+Click on create to create new resource.
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/2.png?raw=true)
+
+Fill all the required information as shown.
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/3.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/4.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/5.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/6.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/7.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/8.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/9.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/10.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/11.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/12.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/13.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/14.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/15.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/16.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/17.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/18.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/19.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/20.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/21.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/22.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/23.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/24.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/25.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/26.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/27.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/28.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/29.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/30.png?raw=true)
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/31.png?raw=true)
