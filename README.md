@@ -1,5 +1,5 @@
 # Working Links
-- **Website Link** : <a href="vision-compute-project.azurewebsites.net" rel="nofollow">Vision-Compute</a>
+- **Website Link** : <a href="https://vision-compute-project.azurewebsites.net/" rel="nofollow">Vision-Compute</a>
 - **Project Video** : <a href="" rel="nofollow">Video</a>
 - **Project Documentation** : <a href="" rel="nofollow">Documentation</a>
 
