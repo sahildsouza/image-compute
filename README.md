@@ -48,47 +48,87 @@ Click on create to create new resource.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/2.png?raw=true)
 
-Fill all the required information as shown.
+Fill all the required information as shown and click on Review + Create.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/3.png?raw=true)
 
+Once it is deployed successfully navigate to keys and endpoint and copy the key.
+
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/4.png?raw=true)
+
+Paste the copied key in script.js as shown below
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/5.png?raw=true)
 
+Aslo copy the Endpoint URL.
+
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/6.png?raw=true)
+
+Paste the copied Endpoint URL in script.js as shown below 
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/7.png?raw=true)
 
+Then to save the changes click on commit changes with specefic commit message.
+
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/8.png?raw=true)
+
+Now we need to use Azure App Services to deploy our webpage. Search for App Services on your Azure portal.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/9.png?raw=true)
 
+Create a Web App
+
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/10.png?raw=true)
+
+Fill all the required information as shown below.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/11.png?raw=true)
 
+Select the pricing plan as per your requirements.
+
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/12.png?raw=true)
+
+Now to deploy the project from github navigate to Deployment tab and enable continuous deployment and click on Authorize.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/13.png?raw=true)
 
+Now sinin to your github account and click on Authorize AzureAppService.
+
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/14.png?raw=true)
+
+Now select your organization, repository & branch and enable basic authentication.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/15.png?raw=true)
 
+And click on create. Once created deployment proccess will start automatically.
+
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/16.png?raw=true)
+
+Now lets create one storage account which we'll use later for backup purpose of our web app. Search for Storage Accounts on the Azure portal.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/17.png?raw=true)
 
+Fill all the required information as shown below.
+
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/18.png?raw=true)
+
+Now navigate to Advanced tab and click on "Allow enabling anonymous access on individual contaners" for anonymous access.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/19.png?raw=true)
 
+Now click on review + create.
+
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/20.png?raw=true)
+
+Now we need to create one container to store our backup files. Follow the setps shown below.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/21.png?raw=true)
 
+Now go back to App service and in settings click on backups and select the storage account and the continer which you have created earlier and set the backup schedule as per your requirements. 
+
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/22.png?raw=true)
+
+
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/23.png?raw=true)
 
