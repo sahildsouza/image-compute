@@ -1,5 +1,7 @@
 # Working Links
-<a href="vision-compute-project.azurewebsites.net" rel="nofollow">Vision-Compute</a>
+- **Website Link** : <a href="vision-compute-project.azurewebsites.net" rel="nofollow">Vision-Compute</a>
+- **Project Video** : <a href="" rel="nofollow">Video</a>
+- **Project Documentation** : <a href="" rel="nofollow">Documentation</a>
 
 # Vision Compute
 
@@ -18,41 +20,10 @@ This project utilizes Azure's Computer Vision API for the following functionalit
 - **Object Detection**: Detects objects within an image and labels them. Endpoint: `/vision/v3.1/detect`.
 - **Image Description (Dense Captions)**: Generates captions for the image, describing the scene in natural language. Endpoint: `/vision/v3.1/describe`.
 
-## Getting Started
-
 ### Prerequisites
 
 - Azure subscription and access to Azure Cognitive Services.
-- A web server to host the application files.
-
-### Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/sahildsouza/vision-compute.git
-```
-
-2. Navigate to the project directory:
-
-```bash
-cd vision-compute
-```
-
-3. Open `script.js` and update the `subscriptionKey` and `endpoint` variables with your Azure Cognitive Services subscription key and endpoint URL:
-
-```javascript
-const subscriptionKey = 'your-subscription-key';
-const endpoint = 'https://your-endpoint-url.cognitiveservices.azure.com/';
-```
-
-### Running the Application
-
-1. Open `index.html` in a web browser.
-
-2. Upload an image or use the camera to capture an image.
-
-3. Select the desired feature (Extract Text, Detect Objects, Add Captions) from the dropdown menu and click "Submit".
+- Azure App Service to host the application files.
 
 ## File Structure
 
