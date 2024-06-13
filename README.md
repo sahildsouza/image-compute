@@ -1,6 +1,6 @@
 # Working Links
 - **Website Link** : <a href="https://vision-compute-project.azurewebsites.net/" rel="nofollow">Vision-Compute</a>
-- **Project Video** : <a href="" rel="nofollow">Video</a>
+- **Project Video** : <a href="https://drive.google.com/file/d/1g3A2G105p5Ts1O9QPhVU-khmpqjW1i-T/view?usp=sharing" rel="nofollow">Video</a>
 - **Project Documentation** : <a href="https://drive.google.com/file/d/1aPbakzsa6-G7Z8WERGJCZ76n6Vyv9FAu/view?usp=sharing" rel="nofollow">Documentation</a>
 
 # Vision Compute
