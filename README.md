@@ -38,6 +38,10 @@ This project utilizes Azure's Computer Vision API for the following functionalit
 3. **Select Feature**: Choose the desired feature from the dropdown menu.
 4. **Submit**: Click on "Submit" to process the image and display the results.
 
+## Resource Visualizer
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/vision-compute.png?raw=true)
+
 ## Deployment Steps
 
 Search for Computer Vision on Azure portal.
