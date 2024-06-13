@@ -163,3 +163,30 @@ Navigate to details tab name the action rule.
 Once all done click on review + create and click on create.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/31.png?raw=true)
+
+## Project Demo
+
+Homepage of project
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/32.png?raw=true)
+
+## Features
+
+### 1. Extract Text
+
+Upload/Capturte any image with text in it select the Extract Text feature and click submit and results will be shown below.
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/33.png?raw=true)
+
+### 2. Detect Object
+
+Upload/Capturte any image with object in it select the Detect Object feature and click submit and results will be shown below.
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/34.png?raw=true)
+
+### 3. Detect Object
+
+Upload/Capturte any image select the Add Captions feature and click submit and results will be shown below.
+
+![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/35.png?raw=true)
+
