@@ -176,7 +176,7 @@ Homepage of project
 
 ## Features
 
-### 1. Extract Text
+### 1. Extract Text.
 
 Upload/Capturte any image with text in it select the Extract Text feature and click submit and results will be shown below.
 
