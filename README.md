@@ -184,7 +184,7 @@ Upload/Capturte any image with object in it select the Detect Object feature and
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/34.png?raw=true)
 
-### 3. Detect Object
+### 3. Add Caption
 
 Upload/Capturte any image select the Add Captions feature and click submit and results will be shown below.
 
