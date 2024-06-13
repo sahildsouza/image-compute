@@ -96,7 +96,7 @@ Now to deploy the project from github navigate to Deployment tab and enable cont
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/13.png?raw=true)
 
-Now sinin to your github account and click on Authorize AzureAppService.
+Now sign-in to your github account and click on Authorize AzureAppService.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/14.png?raw=true)
 
@@ -104,7 +104,7 @@ Now select your organization, repository & branch and enable basic authenticatio
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/15.png?raw=true)
 
-And click on create. Once created deployment proccess will start automatically.
+And click on create. Once created deployment process will start automatically.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/16.png?raw=true)
 
@@ -116,7 +116,7 @@ Fill all the required information as shown below.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/18.png?raw=true)
 
-Now navigate to Advanced tab and click on "Allow enabling anonymous access on individual contaners" for anonymous access.
+Now navigate to Advanced tab and click on "Allow enabling anonymous access on individual container" for anonymous access.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/19.png?raw=true)
 
@@ -124,11 +124,11 @@ Now click on review + create.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/20.png?raw=true)
 
-Now we need to create one container to store our backup files. Follow the setps shown below.
+Now we need to create one container to store our backup files. Follow the steps shown below.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/21.png?raw=true)
 
-Now go back to App service and in settings click on backups and select the storage account and the continer which you have created earlier and set the backup schedule as per your requirements. 
+Now go back to App service and in settings click on backups and select the storage account and the container which you have created earlier and set the backup schedule as per your requirements. 
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/22.png?raw=true)
 
@@ -156,7 +156,7 @@ Fill all the required information as shown below.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/28.png?raw=true)
 
-Navigate to Notificatios and add your email and phone number to which alert will be sent and click OK.
+Navigate to Notifications and add your email and phone number to which alert will be sent and click OK.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/29.png?raw=true)
 
@@ -178,19 +178,19 @@ Homepage of project
 
 ### 1. Extract Text.
 
-Upload/Capturte any image with text in it select the Extract Text feature and click submit and results will be shown below.
+Upload/Capture any image with text in it select the Extract Text feature and click submit and results will be shown below.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/33.png?raw=true)
 
 ### 2. Detect Object
 
-Upload/Capturte any image with object in it select the Detect Object feature and click submit and results will be shown below.
+Upload/Capture any image with object in it select the Detect Object feature and click submit and results will be shown below.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/34.png?raw=true)
 
 ### 3. Add Caption
 
-Upload/Capturte any image select the Add Captions feature and click submit and results will be shown below.
+Upload/Capture any image select the Add Captions feature and click submit and results will be shown below.
 
 ![Computer Vision](https://github.com/sahildsouza/vision-compute/blob/main/images/35.png?raw=true)
 
